@@ -1,7 +1,14 @@
 import * as fs from "fs";
+import { fileURLToPath } from "url";
+import { getAbsolutePath } from "../utils/path.js";
+
+const __filename = fileURLToPath(import.meta.url)
 
 export const rename = async () => {
-    await fs.rename('./files/wrongFilename.txt', './files/properFilename.md', (err) => {
+    const oldFilePath = getAbsolutePath(__filename, "wrongFilename.txt");
+    const newFilePath = getAbsolutePath(__filename, "properFilename.md");
+
+    await fs.rename(oldFilePath, newFilePath, (err) => {
         if (err) throw new Error('FS operation failed');
     });
 };
