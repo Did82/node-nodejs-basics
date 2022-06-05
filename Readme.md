@@ -29,19 +29,27 @@ npm run fs:list
 
 read:
 ```sh
-npm run fs:create
+npm run fs:read
 ```
 
 ### Command line interface(src/cli)
 
-env:
+#### ENV:
 ```sh
 npm run cli:env
 ```
+or:
+```sh
+RSS_name1=value1 RSS_name2=value2 node src/cli/env.js
+```
 
-args:
+#### ARGS:
 ```sh
 npm run cli:args
+```
+or:
+```sh
+node src/cli/args.js --propName value --propName2 value2
 ```
 
 ### Modules(src/modules)
