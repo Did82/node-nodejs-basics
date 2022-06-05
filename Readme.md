@@ -1,5 +1,10 @@
 # Node.js basics
 
+After cloning the repository switch to the ```task1``` branch:
+```sh
+git checkout task1
+```
+
 ### File system (src/fs)
 
 create:
